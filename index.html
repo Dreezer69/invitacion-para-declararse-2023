@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quieres ser mi novia</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="shortcut icon"
+    href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_corazón.svg/1200px-Heart_corazón.svg.png"
+    type="image/x-icon">
+</head>
+
+<body class="body">
+  <article class="hero">
+    <h1 class="hero__title">❤ Quieres ser mi novia ❤</h1>
+    <figure class="hero__image-container">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Amor_en_un_corazón.jpg"
+        alt="Imagen del amor" class="hero__image" />
+    </figure>
+    <button id="heroButtonSi" class="hero__button">Si</button>
+    <button id="heroButtonNo" class="hero__button">No</button>
+  </article>
+
+  <script src="./js/index.js" type="module"></script>
+</body>
+	<script>
+        const documentReady = () => {
+  const heroTitle = document.querySelector('.hero__title');
+  const heroButtonSi = document.getElementById('heroButtonSi');
+  const heroButtonNo = document.querySelector('#heroButtonNo');
+
+  const nowZomosNobios = () => {
+    alert('💞 I love💞');
+    location.href = 'https://www.youtube.com/watch?v=YIfCDgC6sLQ=13s';
+  };
+
+  const evitarKCRompanMyBobo = () => {
+    heroButtonNo.style.position = 'absolute';
+    heroButtonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+    heroButtonNo.style.left = (Math.random() * window.innerWidth) + 'px';
+  };
+
+  const partner = prompt('Ingresa tu nombre');
+  heroTitle.innerHTML += partner + ' ❤';
+
+  heroButtonSi.addEventListener('click', nowZomosNobios);
+  heroButtonNo.addEventListener('mouseover', evitarKCRompanMyBobo);
+};
+
+document.addEventListener('DOMContentLoaded', documentReady);
+    </script>
+<style>
+    .body {
+        background: crimson;
+        color: white;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 0;
+      }
+      
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .hero__title {
+        text-align: center;
+      }
+      
+      .hero__image-container {
+        display: flex;
+        width: 100%;
+        max-width: 512px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0.5rem 0.5rem 0 black;
+      }
+      
+      .hero__image {
+        width: 100%;
+      }
+      
+      .hero__button {
+        background: white;
+        border: 0.125rem solid black;
+        border-radius: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1rem;
+        letter-spacing: 0.125rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 1em;
+        padding: 1em;
+        transition: all 0.5s;
+      }
+      
+      .hero__button:hover {
+        box-shadow: 0 0.5rem 0.5rem 0 black;
+        filter: brightness(125%);
+        transform: scale(1.125);
+    </style>
+
+
+
